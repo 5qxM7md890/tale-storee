@@ -1,0 +1,6 @@
+[
+  {"name":"setprefix","category":"Settings","description":"Change the bot prefix.","usage":"setprefix !"},
+  {"name":"setowner","category":"Owners","description":"Add or remove bot owners.","usage":"setowner add @user"},
+  {"name":"records","category":"Admin","description":"Show moderation records for a user.","usage":"records @user"},
+  {"name":"mymute","category":"Mod","description":"Show your mute status.","usage":"mymute"}
+]

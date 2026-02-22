@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Hosting • Tale Store</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <div id="nav"></div>
+
+    <main class="container">
+      <section class="hero-fate" style="text-align:left">
+        <h1>Hosting</h1>
+        <p>Hosting information and recommendations will be available here.</p>
+        <div class="hero-actions" style="justify-content:flex-start">
+          <a class="btn primary" href="/support">Contact Support</a>
+          <a class="btn gray" href="/pricing">View Pricing</a>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <div class="footer-bottom">All rights reserved © <span id="y"></span> Tale Store</div>
+      </footer>
+    </main>
+
+    <script type="module">
+      import { renderNav } from '/js/common.js';
+      await renderNav('hosting');
+      document.querySelector('#y').textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>

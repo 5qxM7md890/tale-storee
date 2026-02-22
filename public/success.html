@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Payment Success • Tale Store</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <div id="nav"></div>
+
+    <main class="container">
+      <section class="hero2" style="padding-bottom:6px">
+        <h1>Payment successful ✅</h1>
+        <p>Your slots will appear in your dashboard once the webhook is processed.</p>
+        <div class="muted" style="margin-top:10px">Session: <span id="sid"></span></div>
+        <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:18px">
+          <a class="btn primary" href="/account#subscriptions">Go to subscriptions</a>
+          <a class="btn" href="/pricing">Back to pricing</a>
+        </div>
+      </section>
+
+      <section class="card" style="margin:16px 0">
+        <div style="font-weight:900">Next step</div>
+        <div class="muted" style="margin-top:8px; line-height:1.7">
+          Open <b>Dashboard → Subscriptions</b>, pick a slot, then activate it on a server.
+        </div>
+      </section>
+
+      <footer class="footer2" style="margin-top:30px">
+        <div class="footer-bottom">All rights reserved © <span id="y"></span> Tale Store</div>
+      </footer>
+    </main>
+
+    <script type="module">
+      import { renderNav } from '/js/common.js';
+      await renderNav(null);
+      const url = new URL(location.href);
+      const sid = url.searchParams.get('session_id') || '—';
+      document.querySelector('#sid').textContent = sid;
+      // Clear cart
+      document.querySelector('#y').textContent = new Date().getFullYear();
+      try { localStorage.removeItem('tale_cart_v1'); } catch {}
+    </script>
+  </body>
+</html>

@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Terms • Tale Store</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <div id="nav"></div>
+
+    <main class="container">
+      <section class="hero2" style="padding-bottom:0">
+        <h1>Terms of Service</h1>
+        <p>Template text — replace with your real terms.</p>
+      </section>
+
+      <section class="card" style="margin:18px 0; line-height:1.7">
+        <div style="font-weight:900; font-size:18px">1) Service</div>
+        <div class="muted" style="margin-top:8px">
+          You are purchasing access to bot features (“plans”) for a specific duration.
+          Plans may be linked to Discord servers via the dashboard.
+        </div>
+        <div class="line" style="margin:16px 0"></div>
+
+        <div style="font-weight:900; font-size:18px">2) Payments</div>
+        <div class="muted" style="margin-top:8px">
+          Payments are processed by a third-party payment processor (e.g., Stripe). We do not store your card details.
+        </div>
+        <div class="line" style="margin:16px 0"></div>
+
+        <div style="font-weight:900; font-size:18px">3) Acceptable use</div>
+        <div class="muted" style="margin-top:8px">
+          Do not use the service for abuse, spam, or illegal activity. We may suspend access if necessary.
+        </div>
+      </section>
+
+      <footer class="footer2" style="margin-top:30px">
+        <div class="footer-bottom">Last updated: <span id="d"></span> • All rights reserved © <span id="y"></span> Tale Store</div>
+      </footer>
+    </main>
+
+    <script type="module">
+      import { renderNav } from '/js/common.js';
+      await renderNav(null);
+      document.querySelector('#d').textContent = new Date().toLocaleDateString();
+      document.querySelector('#y').textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>

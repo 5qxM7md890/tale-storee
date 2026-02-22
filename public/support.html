@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Support • Tale Store</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <style>
+      details{border:1px solid rgba(36,42,53,0.9); border-radius:16px; padding:12px 14px; background:rgba(19,22,28,0.75)}
+      details+details{margin-top:10px}
+      summary{cursor:pointer; font-weight:800}
+      details p{color:var(--muted); margin:10px 0 0; line-height:1.55}
+    </style>
+  </head>
+  <body>
+    <div id="nav"></div>
+
+    <main class="container">
+      <section class="hero2" style="padding-bottom:8px">
+        <h1>Support</h1>
+        <p>FAQ + your contact links.</p>
+        <div style="display:flex; gap:12px; flex-wrap:wrap">
+          <a class="btn primary" href="https://discord.com/invite/YOUR_INVITE" target="_blank" rel="noreferrer">Discord Server</a>
+          <a class="btn" href="mailto:you@example.com">Email</a>
+        </div>
+        <div class="muted" style="margin-top:10px; font-size:13px">Update the links above with your contacts.</div>
+      </section>
+
+      <section style="padding:8px 0 26px">
+        <details open>
+          <summary>How does “Activate on server” work?</summary>
+          <p>
+            After a successful payment, the customer receives one or more <b>slots</b> (subscriptions).
+            In the Dashboard → Subscriptions tab, they choose a slot and link it to a Discord server where they have Admin/Manage Server permissions.
+          </p>
+        </details>
+        <details>
+          <summary>How does the bot verify premium?</summary>
+          <p>
+            Your bot calls the store API: <code>GET /api/premium/:guildId?productId=...</code> with header <code>x-api-key</code>.
+            If it returns <code>active: true</code>, enable premium features.
+          </p>
+        </details>
+        <details>
+          <summary>Can I refund or cancel?</summary>
+          <p>
+            Use Stripe’s dashboard to refund payments. For cancellations, you can add logic later for recurring subscriptions.
+            This template uses one-time payments for fixed durations.
+          </p>
+        </details>
+      </section>
+
+      <footer class="footer2" style="margin-top:30px">
+        <div class="footer-bottom">All rights reserved © <span id="y"></span> Tale Store</div>
+      </footer>
+    </main>
+
+    <script type="module">
+      import { renderNav } from '/js/common.js';
+      await renderNav('support');
+      document.querySelector('#y').textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>

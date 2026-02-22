@@ -1,0 +1,34 @@
+[
+  {
+    "id": "system_bot",
+    "name": "System Bot",
+    "description": "Full moderation + protection system with logs and settings.",
+    "icon": "🛡️",
+    "monthlyPriceCents": 500,
+    "category": "Core"
+  },
+  {
+    "id": "voice_bot",
+    "name": "Voice Bot",
+    "description": "Voice features: stats, automation, and voice tools.",
+    "icon": "🎙️",
+    "monthlyPriceCents": 400,
+    "category": "Tools"
+  },
+  {
+    "id": "record_bot",
+    "name": "Record Bot",
+    "description": "Records admin actions/channels (configurable).",
+    "icon": "🧾",
+    "monthlyPriceCents": 400,
+    "category": "Tools"
+  },
+  {
+    "id": "broadcast_bot",
+    "name": "Broadcast Bot",
+    "description": "Broadcast messages to members with rate limits and templates.",
+    "icon": "📣",
+    "monthlyPriceCents": 450,
+    "category": "Growth"
+  }
+]

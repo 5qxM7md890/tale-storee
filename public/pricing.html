@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pricing • Tale Store</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <div id="nav"></div>
+
+    <!-- Floating cart button like video -->
+    <div id="cartFab" class="cart-fab" title="Cart">
+      🛒
+      <div id="cartBadge" class="cart-badge" style="display:none">0</div>
+    </div>
+
+    <div id="drawerBackdrop" class="drawer-backdrop"></div>
+    <aside id="drawer" class="drawer" aria-label="Cart">
+      <div style="display:flex; align-items:center; justify-content:space-between; gap:10px">
+        <div>
+          <div id="cartTitle" style="font-weight:950; font-size:18px">Cart Items</div>
+          <div class="muted" style="font-size:12px; margin-top:4px">Review your items before checkout.</div>
+        </div>
+        <button id="closeDrawer" class="btn gray" style="padding:8px 10px" aria-label="Close">✕</button>
+      </div>
+
+      <div class="line"></div>
+
+      <div id="cartItems" style="display:flex; flex-direction:column; gap:10px; overflow:auto; padding-right:4px"></div>
+
+      <div class="cart-actions">
+        <div class="line"></div>
+        <div class="total"><span>Order Summary</span><span id="cartTotal">$0.00</span></div>
+        <button id="checkout" class="btn primary">Proceed To Checkout</button>
+        <button id="continueShopping" class="btn gray">Continue Shopping</button>
+      </div>
+    </aside>
+
+    <main class="container">
+      <section class="hero-fate" style="padding-bottom:10px">
+        <h1>Choose a plan that is right for you</h1>
+        <p>Select a plan, add it to cart, then checkout and activate on your server.</p>
+      </section>
+
+      <section class="grid-products" id="products"></section>
+
+      <footer class="footer" style="margin-top:0">
+        <div class="footer-bottom">All rights reserved © <span id="y"></span> Tale Store</div>
+      </footer>
+    </main>
+
+    <script type="module">
+      import { renderNav } from '/js/common.js';
+      await renderNav('pricing');
+      document.querySelector('#y').textContent = new Date().getFullYear();
+    </script>
+    <script type="module" src="/js/pricing.js"></script>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Payment Canceled • Tale Store</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <div id="nav"></div>
+
+    <main class="container">
+      <section class="hero2" style="padding-bottom:6px">
+        <h1>Payment canceled</h1>
+        <p>No money moved. Your cart is still here.</p>
+        <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:18px">
+          <a class="btn primary" href="/pricing">Return to pricing</a>
+          <a class="btn" href="/support">Need help?</a>
+        </div>
+      </section>
+
+      <footer class="footer2" style="margin-top:30px">
+        <div class="footer-bottom">All rights reserved © <span id="y"></span> Tale Store</div>
+      </footer>
+    </main>
+
+    <script type="module">
+      import { renderNav } from '/js/common.js';
+      await renderNav(null);
+      document.querySelector('#y').textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Commands • Tale Store</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <div id="nav"></div>
+
+    <main class="container">
+      <section class="hero-fate" style="padding-bottom:10px">
+        <h1>Commands</h1>
+        <p>Find the command you are looking for and how to use it.</p>
+      </section>
+
+      <section class="cmd-layout">
+        <aside class="cmd-side">
+          <h3>Categories</h3>
+          <div id="cats"></div>
+        </aside>
+
+        <div class="cmd-main">
+          <div class="searchbar">
+            <span class="muted">🔎</span>
+            <input id="q" placeholder="Search commands" autocomplete="off" />
+          </div>
+          <div class="cmd-list" id="cmds"></div>
+        </div>
+      </section>
+
+      <footer class="footer" style="margin-top:0">
+        <div class="footer-bottom">All rights reserved © <span id="y"></span> Tale Store</div>
+      </footer>
+    </main>
+
+    <script type="module">
+      import { renderNav } from '/js/common.js';
+      await renderNav('commands');
+      document.querySelector('#y').textContent = new Date().getFullYear();
+    </script>
+    <script type="module" src="/js/commands.js"></script>
+  </body>
+</html>

@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Cancelations • Tale Store</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <div id="nav"></div>
+
+    <main class="container">
+      <section class="hero2" style="padding-bottom:0">
+        <h1>Cancelations & Refunds</h1>
+        <p>Template text — set your rules clearly.</p>
+      </section>
+
+      <section class="card" style="margin:18px 0; line-height:1.7">
+        <div style="font-weight:900; font-size:18px">One-time plans</div>
+        <div class="muted" style="margin-top:8px">
+          This template sells fixed-duration plans (1/3/6/12 months) via one-time payments.
+          You can refund payments in Stripe if you choose.
+        </div>
+        <div class="line" style="margin:16px 0"></div>
+
+        <div style="font-weight:900; font-size:18px">Server activation</div>
+        <div class="muted" style="margin-top:8px">
+          Activating a slot links it to a Discord server (guild). You can later add “unlink” rules if you want.
+        </div>
+      </section>
+
+      <footer class="footer2" style="margin-top:30px">
+        <div class="footer-bottom">Last updated: <span id="d"></span> • All rights reserved © <span id="y"></span> Tale Store</div>
+      </footer>
+    </main>
+
+    <script type="module">
+      import { renderNav } from '/js/common.js';
+      await renderNav(null);
+      document.querySelector('#d').textContent = new Date().toLocaleDateString();
+      document.querySelector('#y').textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>

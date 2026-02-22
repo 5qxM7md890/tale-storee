@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Privacy • Tale Store</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <div id="nav"></div>
+
+    <main class="container">
+      <section class="hero2" style="padding-bottom:0">
+        <h1>Privacy Policy</h1>
+        <p>Template text — replace with your real policy.</p>
+      </section>
+
+      <section class="card" style="margin:18px 0; line-height:1.7">
+        <div style="font-weight:900; font-size:18px">What we store</div>
+        <div class="muted" style="margin-top:8px">
+          We store your Discord user ID, username, avatar, and plan activations (which server IDs are linked to your paid slots).
+          Payment details are handled by the payment processor (e.g., Stripe).
+        </div>
+        <div class="line" style="margin:16px 0"></div>
+
+        <div style="font-weight:900; font-size:18px">Cookies</div>
+        <div class="muted" style="margin-top:8px">
+          We use a session cookie to keep you logged in.
+        </div>
+        <div class="line" style="margin:16px 0"></div>
+
+        <div style="font-weight:900; font-size:18px">Contact</div>
+        <div class="muted" style="margin-top:8px">
+          Put your real contact email here.
+        </div>
+      </section>
+
+      <footer class="footer2" style="margin-top:30px">
+        <div class="footer-bottom">Last updated: <span id="d"></span> • All rights reserved © <span id="y"></span> Tale Store</div>
+      </footer>
+    </main>
+
+    <script type="module">
+      import { renderNav } from '/js/common.js';
+      await renderNav(null);
+      document.querySelector('#d').textContent = new Date().toLocaleDateString();
+      document.querySelector('#y').textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tale Store</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <div id="nav"></div>
+
+    <main class="container">
+      <section class="hero-fate">
+        <h1>Comprehensive Management System</h1>
+        <p>
+          Everything you need to manage your community with full commands, security, and clean activation.
+        </p>
+        <div class="hero-actions">
+          <a class="btn primary" href="/pricing">Add to Discord</a>
+          <a class="btn gray" href="/support">Support</a>
+        </div>
+
+        <div class="cards3">
+          <div class="card">
+            <div class="card-top">
+              <div>
+                <h3>Administrative Commands</h3>
+                <ul>
+                  <li>Moderation &amp; permissions</li>
+                  <li>Role &amp; channel utilities</li>
+                  <li>Server controls</li>
+                </ul>
+              </div>
+              <div class="card-icon">🛡️</div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-top">
+              <div>
+                <h3>Voice &amp; Text Management</h3>
+                <ul>
+                  <li>Channel utilities</li>
+                  <li>Voice tools</li>
+                  <li>Automation helpers</li>
+                </ul>
+              </div>
+              <div class="card-icon">🎛️</div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-top">
+              <div>
+                <h3>Complete Protection</h3>
+                <ul>
+                  <li>Anti-raid &amp; anti-spam</li>
+                  <li>Suspicious activity detection</li>
+                  <li>Audit &amp; monitoring</li>
+                </ul>
+              </div>
+              <div class="card-icon">🧩</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="split">
+          <div class="panel">
+            <h2>Guard your community in the shadows</h2>
+            <p class="muted">
+              Protection that runs quietly: detects suspicious activity, permission changes, and abuse patterns.
+            </p>
+
+            <ul class="bullets">
+              <li>Anti-raid and spam control</li>
+              <li>Role &amp; permission change monitoring</li>
+              <li>Verification and anti-fake measures</li>
+            </ul>
+
+            <div style="margin-top:16px; display:flex; gap:12px; flex-wrap:wrap;">
+              <a class="btn primary" href="/pricing">Add to Discord</a>
+              <a class="btn gray" href="/support">Support</a>
+            </div>
+          </div>
+
+          <div class="mock" aria-hidden="true">
+            <div class="bar"></div>
+            <div class="cards">
+              <div></div><div></div><div></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="faq">
+          <details open>
+            <summary>How does activation work?</summary>
+            <p>After payment, you activate a slot on a server where you have the required permissions.</p>
+          </details>
+          <details>
+            <summary>Can I change the subscription duration?</summary>
+            <p>Yes. Choose the duration inside the cart before checkout.</p>
+          </details>
+          <details>
+            <summary>Do I need to manually deliver anything?</summary>
+            <p>No manual delivery. Activation links your plan to a server.</p>
+          </details>
+          <details>
+            <summary>Where do I get support?</summary>
+            <p>Use the Support page to reach Discord or email support.</p>
+          </details>
+        </div>
+
+        <div class="cta">
+          <div>
+            <h2>Start Your Experience Now</h2>
+            <p>Choose a plan, checkout, then activate on your server.</p>
+          </div>
+          <a class="btn primary" href="/pricing">Start Now</a>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <div class="logo" aria-hidden="true"></div>
+            <div>
+              <div class="footer-name">Tale Store</div>
+              <div class="muted">All-in-one bot plans &amp; activation.</div>
+            </div>
+          </div>
+
+          <div class="footer-cols">
+            <div>
+              <div class="footer-head">Website</div>
+              <a href="/">Home</a>
+              <a href="/commands">Commands</a>
+              <a href="/pricing">Pricing</a>
+              <a href="/hosting">Hosting</a>
+              <a href="/support">Support</a>
+              <a href="/account">Dashboard</a>
+            </div>
+            <div>
+              <div class="footer-head">Terms</div>
+              <a href="/terms">Terms of Service</a>
+              <a href="/privacy">Privacy Policy</a>
+              <a href="/cancelations">Cancelations</a>
+            </div>
+            <div>
+              <div class="footer-head">Socials</div>
+              <a href="/support">Discord</a>
+              <a href="#" aria-disabled="true">X</a>
+              <a href="#" aria-disabled="true">YouTube</a>
+              <a href="mailto:you@example.com">Email</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="payrow" aria-label="Payment methods">
+          <span class="pay">Visa</span>
+          <span class="pay">MasterCard</span>
+          <span class="pay">Amex</span>
+          <span class="pay">Mada</span>
+          <span class="pay">Apple Pay</span>
+          <span class="pay">Google Pay</span>
+          <span class="pay">PayPal</span>
+          <span class="pay">Crypto</span>
+        </div>
+
+        <div class="footer-bottom">All rights reserved © <span id="y"></span> Tale Store</div>
+      </footer>
+    </main>
+
+    <script type="module">
+      import { renderNav } from '/js/common.js';
+      await renderNav('home');
+      document.querySelector('#y').textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>

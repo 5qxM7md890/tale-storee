@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Dashboard • Tale Store</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <div id="nav"></div>
+
+    <main class="container">
+      <section class="hero-fate" style="padding-bottom:10px">
+        <h1>Dashboard</h1>
+        <p>Servers • Subscriptions • Invoices</p>
+      </section>
+
+      <div id="tabs" class="tabs"></div>
+      <div id="view"></div>
+
+      <footer class="footer" style="margin-top:18px">
+        <div class="footer-bottom">All rights reserved © <span id="y"></span> Tale Store</div>
+      </footer>
+    </main>
+
+    <script type="module">
+      import { renderNav } from '/js/common.js';
+      await renderNav(null);
+      document.querySelector('#y').textContent = new Date().getFullYear();
+    </script>
+    <script type="module" src="/js/account.js"></script>
+  </body>
+</html>
